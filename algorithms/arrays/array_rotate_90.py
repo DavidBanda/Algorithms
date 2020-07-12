@@ -4,7 +4,13 @@ matrix = [[1, 2, 3],
 
 
 def rotateMatrix(matrix):
-
+    """
+    matrix = [[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]]
+    >>> rotateMatrix(matrix)
+    [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
+    """
     for i in range(len(matrix)):
         for j in range(i, len(matrix[0])):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
@@ -17,9 +23,3 @@ def rotateMatrix(matrix):
 
 
 [print(row) for row in rotateMatrix(matrix)]
-
-
-
-
-
-

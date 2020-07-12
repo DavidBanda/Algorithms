@@ -1,3 +1,11 @@
+"""
+Explanation:
+
+To solve this problem we are gonna use simple math and a depth first search algorithm.
+
+
+"""
+
 def solveNQueens(n):
     queensPosition = []
     DFS([], [], [], queensPosition, n)
@@ -26,8 +34,8 @@ def DFS(queens, xy_intersect_down, xy_intersect_up, queensPosition, n):
 # m = ---------  (1, 45º, /), (-1, 145º, \)
 #      x2 - x1
 
-# y = mx + b |  y - x = b, y + x = b
+# y = mx + b |  y - x = b, y + x = b 
 
 
-[print([print(pos) for pos in row], "") for row in solveNQueens(4)]
+[[print(f'[{row}]') if number != 3 else print(f'[{row}]\n') for number, row in enumerate(board)] for board in solveNQueens(4)]
 
